@@ -16,6 +16,31 @@
         
         <!-- Number -->
         <input type="text" placeholder="phone number" name="fnumber" id="number" required><br>
+        <!-- gender -->
+        <input type="radio" name="xndr" id="male" value="male">Male
+        <input type="radio" name="xndr" id="female" value="female">Female
+        <input type="radio" name="xndr" id="trans" value="trans">Transgender<br>
+        
+        <!-- birthdate -->
+        Birthdate<input type="date" placeholder="Name" name="fbdate" id="bdate" required><br>
+        
+        <!-- hobby -->
+        <input type="checkbox" name="hobby1" id="cricket" value="cricket">Cricket
+        <input type="checkbox" name="hobby2" id="reading" value="reading">Reading
+        <input type="checkbox" name="hobby3" id="travelling" value="travelling">Travelling <br>
+
+        <!-- username -->
+        <input type="text" placeholder="User Name" name="funame" id="uname" required><br>
+        
+        <!-- Email -->
+        <input type="text" placeholder="Email" name="femail" id="email" required><br>
+        
+        <!-- password -->
+        <input type="password" placeholder="password" name="fpassword" id="pass" required><br><br>
+        
+        <!-- retype password  -->
+        <!-- <input type="password" placeholder="password" name="password" id="pass2" required><br><br> -->
+        
     
         <input type="submit">
         
