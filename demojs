@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+}
+
+</style>
+<body>
+
+<h2>Javascript Demo</h2>
+<!-- 
+<button id="mybtn">press me</button> -->
+<div id="demo1"></div>
+<div id="demo2"></div>
+<!-- <input type="button" value="back" onclick = "goback()">  //history back -->
+
+
+<!-- mousehover
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div> -->
+
+<!-- timing -->
+<!-- <button onclick="myvar=setTimeout(mytime, 3000);">Try it</button>
+<button onclick="clearTimeout(myvar)">Stop it</button>     //stop timer -->
+
+<!-- <button onclick="replace1()">try this</button>
+<p id="demo">visit google</p> -->
+
+<!-- <button onclick="upper1()">try it</button>
+<p id="demo">hellowww</p> -->
+
+<!-- <button onclick="myfun()">press here</button> -->
+<!-- <button onclick="this.innerHTML=Date()">The time is?</button> -->
+<!-- <button onclick="disp()">try it</button> -->
+
+<script>   //type="module"
+
+// let x=5;    
+// document.write(x);
+
+// function myf(t1,t2){
+//     return t1**t2;
+// }
+
+// document.getElementById('demo').innerHTML = myf(4,3);
+// function disp() {
+//   document.getElementById("demo").innerHTML = Date();
+// }
+
+// Extracting String Parts
+//  slice(start, end)
+//  substring(start, end)
+//  substr(start, length)
+
+
+// let str = "apple, banana, mango";
+// document.getElementById('demo').innerHTML=str.slice(7,13);
+ 
+// let str = "apple, banana, mango";
+// document.getElementById('demo').innerHTML=str.substring(5,8);
+
+// let str = "apple, banana, mango";
+// document.getElementById('demo').innerHTML=str.substr(7,6); 
+
+// - /i capital
+// - /g global match
+
+// function replace1(){
+// let text = document.getElementById("demo").innerHTML;
+// document.getElementById("demo").innerHTML = 
+//     text.replace("google","microsoft");
+// }
+
+// let str = 'JS will, JS will rock you!';
+// let newStr = str.replace(/JS/g,'JavaScript');
+// document.write(newStr);
+
+// function upper1() {
+//     let text = document.getElementById("demo").innerHTML;
+//     document.getElementById("demo").innerHTML = 
+//     text.toUpperCase();
+// }
+
+// let str = 'hellowwww';
+// let newstr = str.toUpperCase();
+// document.write(newstr);
+
+// let text1 = "hello";
+// let text2 = "world";
+// let text3 = text1.concat(" " + text2);
+// document.getElementById("demo").innerHTML = text3;
+
+// let txt="5";     //last digit
+// document.getElementById("demo").innerHTML= txt.padStart(4,3);  /3335  //(total digit,any digit)
+
+// let text1 = "hello";
+// document.getElementById("demo").innerHTML = text1.length;
+
+// The trim() method removes whitespace from both sides of a string:
+// let text1 = "    hello   ";
+// let text2 = text1.trim();
+// document.getElementById("demo").innerHTML = text2;
+
+//The charAt() method returns the character at a specified index (position) in a string
+// let text = "hello";
+// document.getElementById("demo").innerHTML = text.charAt(0);
+
+//The charCodeAt() method returns the unicode of the character at a specified index in a string:
+// let text = "Hello";
+// document.getElementById("demo").innerHTML = text.charCodeAt(0);
+
+//A string can be converted to an array with the split() method:
+// let text = "H,e,l,l,o";
+// const myarray = text.split(",");
+// document.getElementById("demo").innerHTML = myarray[1];
+
+//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+// let str = "Please locate where 'locate' occurs!";
+// document.getElementById("demo").innerHTML = str.lastIndexOf("locate",15);
+
+//The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+// let text = "The rain in SPAIN stays mainly in the plain"; 
+// document.getElementById("demo").innerHTML = text.match(/ain/g);
+
+//The includes() method returns true if a string contains a specified value.
+// let text = "The rain in SPAIN stays mainly in the plain"; 
+// document.getElementById("demo").innerHTML = text.includes("in",10);
+
+//The startsWith() method returns true if a string begins with a specified value, otherwise false:
+// let text = "The rain in SPAIN stays mainly in the plain"; 
+// document.getElementById("demo").innerHTML = text.startsWith("rain",4);
+
+//The endsWith() method returns true if a string ends with a specified value, otherwise false:
+// let text = "Hello world, welcome to the universe.";
+// document.getElementById("demo").innerHTML = text.endsWith("world",11);
+
+//Template literals allow variables in strings:
+// let text = `Hello's world, "welcome" to the universe.`;
+// document.getElementById("demo").innerHTML = text;
+
+//Template literals allow variables in strings:
+// let firstname = "tejas";
+// let lastname = "devani";
+// let text = `welcome ${firstname} ${lastname}`;
+// document.getElementById("demo").innerHTML = text;
+
+//Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+// let x = 9999999999999999;
+// document.getElementById("demo").innerHTML = x;
+
+// let x = 10;
+// let y = 20;
+// let z = "30";
+// let result = x+y+z;
+// document.getElementById("demo").innerHTML = result;
+
+// let x = "100";
+// let y = "10";
+// let z = x+y;
+// document.getElementById("demo").innerHTML = z;
+
+//You can use the global JavaScript function isNaN() to find out if a value is a not a number:
+// let z = 100/ "apple";
+// document.getElementById("demo").innerHTML = isNaN(z);   //true
+
+//Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+// let num = 2;
+// let txt = "";
+// while (num!= Infinity){
+//     num=num*num;
+//     txt=txt+num;
+// }
+// document.getElementById("demo").innerHTML = txt;
+
+//The toString() method returns a number as a string.
+// let x = 123;
+// document.getElementById("demo").innerHTML =
+//   x.toString() + "<br>" +
+//    (123).toString() + "<br>" +
+//    (100 + 23).toString();
+
+//toFixed() returns a string, with the number written with a specified number of decimals:
+// let x = 9.656;
+// document.getElementById("demo").innerHTML =
+//   x.toFixed(0) + "<br>" +
+//   x.toFixed(2) + "<br>" +
+//   x.toFixed(4) + "<br>" +
+//   x.toFixed(6);
+
+//typeof() find to type
+// let x = 20;
+// let a = "tejas"
+// let z = new Number(123);
+// let y = function myfun(){}
+// document.getElementById("demo").innerHTML =typeof y;
+
+// let x = 500;
+// let y = 5000;
+// document.getElementById("demo").innerHTML = (x==y);
+
+
+// let cars = ["BMW","audi","lemborghini"];
+// cars[2] = "suzuki";
+// document.getElementById("demo").innerHTML = cars[2];
+
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo").innerHTML = cars[cars.length-1];
+
+//The easiest way to add a new element to an array is using the push() method:
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo").innerHTML = cars;
+// cars.push("suzuki");
+// document.getElementById("demo2").innerHTML = cars;
+
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = Array.isArray(cars);
+
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo").innerHTML = cars.join("/");
+
+//The shift() method removes the first array element and "shifts" all other elements to a lower index.
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// cars.shift();
+// document.getElementById("demo2").innerHTML = cars;
+
+//The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// cars.unshift("maruti");
+// document.getElementById("demo2").innerHTML = cars;
+
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// cars[2]="honda";
+// cars[cars.length] = "suzuki";
+// document.getElementById("demo2").innerHTML = cars;
+
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// delete cars[2];
+// document.getElementById("demo2").innerHTML = cars;
+
+// The concat() method creates a new array by merging (concatenating) existing arrays:
+// const myboy = ["jack","tejas"];
+// const mygirl = ["rose","mayu"];
+// const mychild = myboy.concat(mygirl);
+// document.getElementById("demo1").innerHTML = mychild;
+
+// The splice() method adds new items to an array.
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// cars.splice(1,2,"suzuki","honda");
+// let remove = cars.splice(2,2,"honda","suzuki");
+// document.getElementById("demo2").innerHTML = cars;
+
+// The slice() method slices out a piece of an array.
+// At position 2, remove 2 items: 
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// const car = cars.slice(2,2);
+// document.getElementById("demo2").innerHTML = car;
+
+//The sort() method sorts an array alphabetically:
+// let cars = ["BMW","audi","lemborghini"];
+// document.getElementById("demo1").innerHTML = cars;
+// cars.reverse();
+// cars.sort();
+// document.getElementById("demo2").innerHTML = cars;
+
+//sort numbers
+// let num = [1,5,3,9,3];
+// document.getElementById("demo1").innerHTML = num;
+// num.sort(function(a,b)
+// {
+//     return a-b   //return b-a(sort descending)
+// });
+// document.getElementById("demo2").innerHTML =num;
+
+//sort the array in random order
+// let num = [1,5,3,9,3];
+// document.getElementById("demo1").innerHTML = num;
+// const a = Math.random(num);
+// num.sort(function(a,b)
+// {
+//     return 0.5 - Math.random()
+// });
+// document.getElementById("demo2").innerHTML =num;
+
+//Find the Highest (or Lowest) Array Value
+// const num = [40,5,20,35,100];
+// num.sort(function(a,b)
+// {
+//     return a-b    return a-b   //return b-a(highest value)
+// });
+//     document.getElementById("demo1").innerHTML = num[0];
+
+//maximum number in array
+// let num = [1,5,3,9,3];
+// document.getElementById("demo1").innerHTML = maxx(num);
+// function maxx(arr){
+//     return Math.max.apply(null,arr);
+// }
+
+// const cars = [
+//     {type:"volvo", year:2016},
+//     {type:"saab" , year:2022},
+//     {type:"bmw" , year:2001}
+// ];
+// myfun();
+// cars.sort(function(a,b){
+//     return a.year - b.year
+// });
+// myfun();
+// function myfun(){
+//     document.getElementById("demo1").innerHTML = 
+// cars[0].type + " " + cars[0].year;
+// }
+
+// const numbers = [45,85,12,41,39];
+// numbers.forEach(function(value, index , arr){
+//     document.getElementById("demo").innerHTML = numbers
+// });
+
+//This example multiplies each array value by 2:
+// const numbers1 = [45,85,12,41,39];
+// const numbers2 = numbers1.map(myFunction);
+// document.getElementById("demo1").innerHTML = numbers2;
+// function myFunction(value, index, array) {
+//   return value * 2;
+// }
+
+// const numbers = [45,85,12,41,39];
+// const over18 = numbers.filter(myFunction);
+// document.getElementById("demo1").innerHTML = over18;
+// function myFunction(value, index, array) {
+//   return value > 40;
+//}
+
+// const numbers = [45,85,12,41,39];
+// let sum = numbers.reduce(myFunction);
+// document.getElementById("demo1").innerHTML = sum;
+// function myFunction(total, value, index, array) {
+//   return total + value;
+// }
+
+// const numbers = [45,85,12,41,39];
+// let num18 = numbers.every(myfun);
+// document.getElementById("demo1").innerHTML = num18;
+// function myfun(value, index, array){
+//     return value > 11;
+// }
+
+// const numbers = [45,85,12,41,39];
+// let num18 = numbers.some(myfun);
+// document.getElementById("demo1").innerHTML = num18;
+// function myfun(value, index, array){
+//     return value > 86;
+// }
+
+//index number
+//const fruits = ["banana","apple","mango","gavava"];
+//let pos = fruits.indexOf("apple") + 1;
+// document.getElementById("demo1").innerHTML = pos;
+
+// const fruits = ["banana","apple","mango","gavava","apple"];
+// let pos = fruits.lastIndexOf("apple") + 1;
+// document.getElementById("demo1").innerHTML = pos;
+
+// const fruits = ["banana","apple","mango","gavava"];
+// document.getElementById("demo1").innerHTML = fruits.includes("mango");
+
+// const numbers = [50,23,5,78,62];
+// let first = numbers.find(myFunction);
+// document.getElementById("demo1").innerHTML = first;
+// function myFunction(value, index, array) {
+//   return value > 3;
+// }
+
+// const d = new Date(2022,5,27,3,58,6);
+// document.write(d);
+// document.write(d.toString());
+// document.write(d.toUTCString());
+// document.write(d.toDateString());
+// document.write(d.toISOString());
+
+// const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// const d = new Date();
+// let day = days[d.getDay()];
+// document.write(day);
+// const d = new Date();
+// d.setDate(d.getDate()+50);
+// document.write(d);
+
+// document.write(Math.PI);
+// document.write(Math.round(4.49));  // rounded value - 4
+// document.write(Math.ceil(4.55));   //up number - 5
+// document.write(Math.floor(4.55));  //down number - 4
+// document.write(Math.trunc(4.55));  //up number - 4
+// document.write(Math.sign(4.55));
+// document.write(Math.pow(4,2));     //power - 16 
+// document.write(Math.sqrt(100));    //sqrt - 10  
+// document.write(Math.abs(-4.25));   //positive  - 4.25
+// document.write(Math.sin(5 * Math.PI / 180));
+// document.write(Math.cos(5 * Math.PI / 180));
+
+// document.write(Math.max(50,65,98,78,12,45,98));
+// document.write(Math.log10(1000));
+
+// document.write(Math.random());
+
+// document.write(Math.random()*10);
+// document.write(Math.floor(Math.random()*10));
+
+// document.write(Boolean(10>0));
+// document.write(10>9);
+
+// const x = new Boolean(false);
+// const y = new Boolean(false);
+// document.write(x===y);
+
+// age = 5;
+// const vote = age>18 ? 'too young' : 'old enough';
+// document.write(vote);
+
+// document.write("2">"12");
+// document.write(2>12);
+// document.write(12=="12");
+// document.write(12=="john");
+
+// if(new Date().getHours() < 18){
+//     document.getElementById('demo1').innerHTML = "good day";
+// }
+
+//switch case
+// let day;
+// switch (new Date().getDay()){
+//     case 0:
+//     day = "sunday";
+//     break;
+//     case 1:
+//     day = saturday;
+// }
+
+//for loop
+// for(let i = 0;i<5;i++){
+//     document.write(i);
+// }
+
+// const cars = ["bmw","volvo","ford","audi"];
+// let i,len,text;
+// for (i=0; i<cars.length; i++){
+//     document.write(cars[i]);
+// }
+
+//while
+// var i = 11;
+// while(i<=15)
+// {
+//     document.write(i + "</br>");
+//     i++;
+// }
+
+//do-while
+// var i = 21;
+// do{
+//     document.write(i + "</br>");
+//     i++;
+// }while(i<=25);
+
+//break
+// var i;
+// for(i=0;i<10;i++)
+// {
+//     if(i==4) 
+//     {
+//         break;
+//     }
+//     document.write(i);
+// }
+
+//continue
+// var i;
+// for(i=0;i<10;i++)
+// {
+//     if(i==4) 
+//     {
+//         continue;
+//     }
+//     document.write(i);
+// }
+
+// const name = "tejas";
+// for(const x of name){
+//     document.write(x);
+// }
+
+//sets
+// const letters = new Set(["a","b","c"]);
+// document.getElementById("demo1").innerHTML= letters.size;
+
+//add()method in set
+// const letters = new Set(["a","b","c"]);
+// letters.add("d");
+// letters.add("e");
+// document.getElementById("demo1").innerHTML= letters.size;
+
+//map  entries() method
+// const fruits = new Map([
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ]);
+// let text = "";
+// for (const x of fruits.entries()) {
+//   text += x + "<br>";
+// }
+// document.getElementById("demo1").innerHTML = text;
+
+//The Unary + Operator
+// let y = "5";
+// let x = + y;
+// document.getElementById('demo1').innerHTML = typeof y +  typeof x;
+
+//Converting Numbers to Strings
+// let x = 123;
+// document.getElementById('demo1').innerHTML = String(x);
+
+//Converting Dates to Numbers
+// d = new Date();
+// document.getElementById('demo1').innerHTML = Number(d);
+
+//Converting Dates to Strings
+// d = new Date('October 15, 1996 05:35:32');
+// document.getElementById('demo1').innerHTML = Date().toString() ;
+
+//regular expression
+//The search() method searches a string for a specified value and returns the position of the match:
+// let text = "department of computer science";
+// let n = text.search(/computer/i);
+// document.write(n);
+
+//multiline matching use ^/m
+// let text = "\nIs th\nis it?";
+// let result = text.match(/^is/m);
+// document.getElementById("demo1").innerHTML = "Result is: " + result;
+
+//global search or numbers
+// let text = "123456789";
+// let result = text.match(/[1-4]/g);
+// document.getElementById("demo1").innerHTML = result;
+
+// Find any of the alternatives separated with |
+// let text = "re, green, red, green, gren, gr, blue, yellow";
+// let result = text.match(/(red|green)/g);
+// document.getElementById("demo").innerHTML = result;
+
+//let text = "department of computer science 100 hellooo world";
+//let n = text.match(/\d/g); //search digit
+// let n = text.search(/\bco/); //search word "co" is beginning of line 
+//let n = text.search(/er\b/); //search word "co" is end of line 
+// let n = text.match(/[e]/g); //global search for character
+// let n = text.match(/\s/g); //global search for whitespace
+//let n = text.match(/lo*/g);  //search "l" followed by "o" or more "o"
+// let n = text.match(/lo+/g); //search "l" followed by more then one "o"
+//let n = text.match(/lo?/g);  //search "l" followed by "o" one time
+//document.write(n);
+
+// test() method searches a string for a pattern, and returns true or false, depending on the result.
+// var str = "The best things in life are free";
+//     var patt = new RegExp("e");
+//     var res = patt.test(str);
+//     document.write(res);
+
+//exec() method searches a string for a specified pattern, and returns the found text as an object.
+// var str = "The best things in life are free";
+//     var patt = new RegExp("e");
+//     var res = patt.exec(str);
+//     document.write(res);
+
+//exception handling
+//try , catch , finally , throw
+// try{
+//     alert("welcome");
+// }
+// catch(err){
+//     document.write(err.mess);
+// }
+
+//JavaScript has 3 types of scope:
+// Block scope  , Function scope, Global scope
+
+//javascript hoisting
+
+//strict mode
+
+//this keyword
+// const person = {
+//   firstName: "tejas",
+//   lastName: "Devani",
+//   id: 5566,
+//   fullName : function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+// document.getElementById("demo1").innerHTML = person.fullName();
+
+//call()
+// const person1 = {
+//   fullName: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person2 = {
+//   firstName:"tejas",
+//   lastName: "Devani",
+// }
+// let x = person1.fullName.call(person2); 
+// document.getElementById("demo1").innerHTML = x;
+
+//bind()
+// const person1 = {
+//   firstName: "tejas",
+//   lastName: "Devani",
+//   fullName : function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+// const person2 = {
+//     firstName: "mayu",
+//     lastName: "makawana" 
+// }
+// let fullName = person1.fullName.bind(person2);
+// document.getElementById("demo1").innerHTML = fullName();
+
+//arrow function
+// let sum = function(a,b)  //simple function
+// {
+//     return a+b;
+// }
+// document.write(sum(5,8));
+
+// let sum = (a,b) => a*b;  //arrow
+// document.write(sum(5,8));
+
+// let double = a => a*2; 
+// document.write(double(5));
+
+// hello = () => "hello world";
+// document.write(hello());
+
+// hello = (val) => "hello " + val;
+// document.write(hello("universe"));
+
+//javascript classess
+// class car {
+//     constructor(name,year){
+//         this.name = name;
+//         this.year = year;
+//     }
+// }
+// const mycar = new car("ford", 2014);
+// document.write(mycar.name + " " + mycar.year);
+
+//javascript modules
+//import
+//export
+
+//JSON
+// Converting a JSON Text to a JavaScript Object
+// let text = '{"employees":[' +
+// '{"firstName":"John","lastName":"Doe" },' +
+// '{"firstName":"Anna","lastName":"Smith" },' +
+// '{"firstName":"Peter","lastName":"Jones" }]}';
+// const obj = JSON.parse(text);
+// document.getElementById("demo1").innerHTML =
+// obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+//javascript object
+
+// //object properties
+// person.country = "india";  //add properties
+// delete person.age;  //deleting properties
+// myobj.cars.cars2;  //object properties declaration type
+// myobj.cars["cars2"];
+// myobj["cars"]["cars2"];
+
+//javasript methods
+// const person = {        //person is object
+//     fname : "tejas",
+//     lname : "devani",
+//     fullname : function(){    //fullname is method  //anonymous function
+//         return person.fname + " " + person.lname; 
+//     }
+// };
+// document.write(person.fullname());
+
+//for-in loop
+// const person = {
+//   name: "tejas",
+//   age: 30,
+//   city: "New York"
+// };
+// for (let x in person) {
+//    document.write(person[x])
+// };
+
+//getter function
+// const person = {        
+//     fname : "tejas",
+//     lname : "devani",
+//     get getname(){  //getname : function()    
+//         return this.fname.toUpperCase(); 
+//     }
+// };
+// document.write(person.getname);
+
+//setter function
+// const person = {
+//     fname : "tejas",
+//     lname : "devani",
+//     set setname(n) {  //setname : function()
+//         this.fname = n.toUpperCase();
+//     }
+// };
+// person.setname = 'mayu';
+// document.write(person.fname); 
+
+//object constructor function
+// function person(first,last,full){
+//     this.fname = first;
+//     this.lname = last;
+//     this.fullname = full;
+//     this.class = "tymca";
+// }
+// //person.prototype.class = "tymca";   //javascript object prototype
+// var per1 = new person("tejas","devani","tejasdevani");
+// var per2 = new person("mayu","makawana","mayumakawana");
+// document.write(per2.fname);
+
+//JavaScript Iterables
+// let numbers = [100,200,300];
+// //let str = "tejas devani";     //for string iterables
+// let iter = numbers[Symbol.iterator]();
+// iter.next();     //not print
+// document.write(iter.next().done);  //true-false print
+// document.write(iter.next().value); //value print
+// // for(let char of str){
+// //     document.write(char);
+// // }
+
+//javaScript sets
+// const set = new Set(["a","b","c","d","e"]);
+// document.write(set.size);
+// set.add("t");
+// set.delete("t");
+// document.write(set.has());
+// document.write(set.values());
+// document.write(set.keys());
+// document.write(set.entries());
+// document.write(set.clear());
+
+//javascript maps
+// const map = new Map()
+// map.set("name","tejas")    //use for insert and update
+// map.get("name","tejas")
+// document.write(map);
+// document.write(map.get("name"));   //tejas
+// document.write(map.has("name"));  //true
+// document.write(map.size);  //size
+// document.write(map.delete("name"));  //delete
+// document.write(map.clear);  //clear
+
+//javascript functions
+// function myf(a,b) {
+//     return a*b;
+// }
+// document.write(6,6);
+
+//javascript classes
+// class car{
+//     constructor(name,year){
+//         this.name1 = name;
+//         this.year1 = year;
+//     }
+// }
+// const mycar = new car("ford", 1999);
+// document.write(mycar.name1 + " " + mycar.year1);
+
+//inheritance in javascript
+
+//javascript class getter and setter
+// class car {
+//     constructor(brand){
+//         this.carname = brand;
+//     }
+//     get cnam(){
+//         return this.carname;
+//     }
+//     set cnam(x){
+//         this.carname = x;
+//     }
+// }
+// let mycar = new car("ford");
+// document.write(mycar.cnam);
+
+//javascript class static methods
+// class car{
+//     constructor(name){
+//         this.name = name;
+//     }
+//     static hello(){
+//         return "hello";
+//     }
+// }
+// let mycar = new car("ford");
+// document.write(car.hello());
+
+//javascript async
+//javascript callbacks
+//functions are executed in the sequence they are called
+// function disp(some) {
+//     document.write(some);
+// }
+// function myfirst() {
+//     disp("hello");
+// }
+// function mysecond() {
+//     disp("hellooo");
+// }
+// myfirst();  
+// mysecond();
+
+// function disp(some) {
+//     document.write(some);
+// }
+// function mycalc(num1,num2) {
+//     let sum = num1 + num2;
+//     return sum;
+// }
+// let result = mycalc(5,5);
+// mydisp(result);
+
+//javascript promise object
+// function  mydisp(some) {
+//     document.write(some);
+// }
+// let mypromis = new Promise(function(resolve,reject) {
+//     let x=0;
+//     if(x==0){
+//         resolve("correct");
+//     }
+//     else{
+//         reject("error");
+//     }
+// });
+// mypromis.then(
+//     function (value) {
+//         mydisp(value);
+//     },
+//     function (error) {
+//         mydisp(error);
+//     }
+// )
+
+//javascript async
+
+
+//javascript html dom
+
+
+//javascript browser bom
+// document.write(screen.height);
+// document.write(screen.width);
+// document.write(screen.colorDepth);
+
+//javascript popup boxes
+// function  disp() {
+//     var txt;
+//     if(confirm("press a button")){
+//         txt = "you pressed cancel";
+//     }
+//     else{
+//         txt = "you pressed cancel";
+//     }
+//     document.write(txt);
+// }
+
+//javascript prompt()
+// function  disp() {
+//     var text;
+//     let person = prompt("enter your name","tejas devani");
+//     if(person ==null || person==""){
+//     text = "prompt cancel";
+//     }
+//     else{
+//         text = "hllo " + person;
+//         document.write(text);
+//     };
+// }
+
+//html dom changing css
+// document.getElementById("demo1").style.color = "blue";
+
+//html dom animation
+// <div id="container">
+// <div id="animate"></div>
+
+//html dom events
+//mouse hover
+// function mOver(obj) {
+//   obj.innerHTML = "Thank You"
+// }
+// function mOut(obj) {
+//   obj.innerHTML = "Mouse Over Me"
+// }
+
+//html dom eventlistner
+// document.getElementById("mybtn").addEventListener
+//     ("click", function() {
+//     alert("hello world");
+// });
+
+//Add Many Event Handlers to the Same Element
+// var x = document.getElementById("mybtn");
+// x.addEventListener("click",first);
+// x.addEventListener("click",second);
+// function first() {
+//     alert("hello world");
+// }
+// function second() {
+//     alert("this function is also exicuted");
+// }
+
+//You can add events of different types to the same element
+// var x = document.getElementById("mybtn");
+// x.addEventListener("mouseover",inn);
+// x.addEventListener("mouseout",outt);
+// x.addEventListener("click",clickk);
+
+// function inn() {
+//    document.getElementById("demo1").innerHTML += "mouse hover<br>"     
+// }
+// function outt() {
+//     document.getElementById("demo1").innerHTML += "mouse out<br>"
+// }
+// function clickk() {
+//     document.getElementById("demo1").innerHTML += "mouse click<br>"
+// }
+
+//new html element insert before
+// const para = document.createElement("p");
+// const node = document.createTextNode("This is new.");
+// para.appendChild(node);
+
+// const element = document.getElementById("div1");
+// const child = document.getElementById("p1");
+// element.insertBefore(para,child);
+
+
+//bom - The Browser Object Model
+// document.getElementById("demo1").innerHTML = 
+// "Available screen width is " + screen.availWidth;
+
+//javascript window location
+// document.getElementById("demo1").innerHTML = "full url of website is here>"+ window.location.href;
+// document.getElementById("demo2").innerHTML = "full url of website is here>"+ window.location.hostname;
+// function newdoc() {
+//             Window.location.assign("https://google.com");
+// }
+
+//javascript window history
+// function goback(){
+//     window.history.back()
+// }
+
+//javascript windows navigator
+// document.write(navigator.cookieEnabled);
+// document.write(navigator.appName);
+// document.write(navigator.appCodeName);
+// document.write(navigator.platform);
+// document.write(navigator.onLine);
+
+//javascript timing event
+// function mytime() {
+//   alert("hello");
+// }
+
+//javascript cookies
+//create cookie
+// document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+//read cookies
+// let x = document.cookie;
+
+//Change a Cookie with JavaScript
+//document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+//Delete a Cookie with JavaScript
+//document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+// function chackcookie() {
+//   let username = getCookie("username");
+//   if(username != ""){
+//     alert ("welcome again " + username);
+//   }else {
+//     username = prompt("enter your name ","")
+//     if(username!= "" && username!= null){
+//       setCookie("username",username,365);
+//     }
+//   }
+// }
+
+//create cookie
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- //dom - nodes , animations , forms , windows event , collection
+//bom - cookies
+//async - whole
+//class - inheritance , static -->
