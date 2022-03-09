@@ -8,22 +8,22 @@
 </head>
 <body>
     <b><h2><center>Registration form</center></h2></b>
-    <center><form name="myform" method="post" action="file:///Users/tagline/Desktop/javascript/login.html"> 
-        <!-- onsubmit="return regform()" -->
+    <center><form name="myform" method="post" onsubmit="return regform()" > 
+        <!-- action="file:///Users/tagline/Desktop/javascript/login.html" -->
        
         <!-- Name -->
-        <input type="text" placeholder="Name" name="fname" id="name" required><br>
+        <input type="text" placeholder="Name" name="fname" id="name"><br>
         
         <!-- Number -->
-        <input type="text" placeholder="phone number" name="fnumber" id="number" required><br>
+        <input type="text" placeholder="phone number" name="fnumber" id="number"><br>
         
-           <!-- gender -->
+           gender
            <input type="radio" name="xndr" id="male" value="male">Male
            <input type="radio" name="xndr" id="female" value="female">Female
            <input type="radio" name="xndr" id="trans" value="trans">Transgender<br>
            
            <!-- birthdate -->
-           Birthdate<input type="date" placeholder="Name" name="fbdate" id="bdate" required><br>
+           Birthdate<input type="date" placeholder="Name" name="fbdate" id="bdate"><br>
            
            <!-- hobby -->
            <input type="checkbox" name="hobby1" id="cricket" value="cricket">Cricket
@@ -31,16 +31,16 @@
            <input type="checkbox" name="hobby3" id="travelling" value="travelling">Travelling <br>
    
            <!-- username -->
-           <input type="text" placeholder="User Name" name="funame" id="uname" required><br>
+           <input type="text" placeholder="User Name" name="funame" id="uname"><br>
            
            <!-- Email -->
-           <input type="text" placeholder="Email" name="femail" id="email" required><br>
+           <input type="text" placeholder="Email" name="femail" id="email"><br>
            
            <!-- password -->
-           <input type="password" placeholder="password" name="fpassword" id="pass" required><br><br>
+           <input type="text" placeholder="password" name="fpass1" id="pass1"><br><br>
            
-           <!-- retype password  -->
-           <!-- <input type="password" placeholder="password" name="password" id="pass2" required><br><br> -->
+         <!-- retype password -->
+         <input type="text" placeholder="password" name="fpass2" id="pass2"><br><br>
         
         <input type="submit">
         
@@ -51,56 +51,55 @@
 <script>
     function regform() {
 
-        let name = document.myform["fname"].value;
-        if (fname.length<5){
+        let name = document["myform"]["fname"].value;
+        if (name.length<5){
             alert("name must be filled out");
-            return false;
+            // return false;
         }
 
-        let number = document.myform["fnumber"].value;
-        // var mob = /^[7-9]\d{9}$/;
-        if(number.length<=10){
-            alert("Password must be at least 10 characters long");
-            return false;
+        let number = document["myform"]["fnumber"].value;
+        if(number.length<10){
+            alert("Number must be at least 10 characters long");
+            //return false;
         }
 
 
-        let gender = document.myform["fgender"].value;
+        let gender = document["myform"]["fgender"].value;
         let bdate = document.myform["fbdate"].value;
 
         let hobby = [];
-        let checkboxes = document.myform["hobby[]"];
+        let checkboxes = document["myform"]["hobby[]"];
         for(var i=0; i < checkboxes.length; i++) {
         if(checkboxes[i].checked) {
             hobby.push(checkboxes[i].value);
         }
         }
 
-        let uname = document.myform["funame"].value;
-        let name = document.myform["fname"].value;
-        if (fname.length<5){
+        let uname = document["myform"]["funame"].value;
+        if (uname.length<5){
             alert("name must be filled out");
-            return false;
+           // return false;
         }
 
-        let email = document.myform["femail"].value;
-        if(email.length>15){
+        let email = document["myform"]["femail"].value;
+        var val =  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(val.test(email)== false){
             alert("you must enter a valid email address");
-            return false;
+           // return false;
         }
 
-        let pass = document.myform["fpass"].value;
-        if(pass.length < 8){
+        let pass1 = document["myform"]["fpass1"].value;
+        if(pass1.length<8){
             alert("Password must be at least 8 characters long");
-            return false;
+            //return false;
         }
 
-        // let pass2 = document.myform["pass2"].value;
-        //  if (pass1 != pass2) {
-        //     alert("Passwords do not match.");
-        //     return false;
-        // }
-        // return true;
+        let pass2 = document["myform"]["fpass2"].value;
+         if (pass1 != pass2) {
+            alert("Passwords do not match.");
+           // return false;
+        }
+       // return true;
     }
 </script>
 </body>
