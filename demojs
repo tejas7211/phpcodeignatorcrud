@@ -17,31 +17,42 @@
 <body>
 
 <h2>Javascript Demo</h2>
-<!-- 
-<button id="mybtn">press me</button> -->
-<div id="demo1"></div>
+<!-- click on text
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2> -->
+<!-- <h2 onclick="changeText(this)">Click on this text!</h2>  // for write in script tag -->
+
+<!-- <button id="mybtn">press me</button>  -->
+<div id="demo1">tejas</div>
 <div id="demo2"></div>
 <!-- <input type="button" value="back" onclick = "goback()">  //history back -->
 
+<!-- <p class="demo">hello tezz</p>
+<p class="demo">hello tezas</p>  -->
+
+<!-- collection
+<p>hello tezz</p>
+<p>hello tezas</p>  -->
 
 <!-- mousehover
 <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
 style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
 Mouse Over Me</div> -->
 
-<!-- timing -->
-<!-- <button onclick="myvar=setTimeout(mytime, 3000);">Try it</button>
-<button onclick="clearTimeout(myvar)">Stop it</button>     //stop timer -->
+<!-- timing
+<button onclick="myvar = setTimeout(myfun,3000);">press here</button>  //after 3 second alert
+<button onclick="clearTimeout(myvar)">stop it</button>  //stop alert -->
+
+<!-- <button onclick="goback()">go back</button>  //history -->
 
 <!-- <button onclick="replace1()">try this</button>
 <p id="demo">visit google</p> -->
 
-<!-- <button onclick="upper1()">try it</button>
-<p id="demo">hellowww</p> -->
+<!-- <button onclick="upper1()">try it</button>-->
+<!-- <p id="demo">hellowww</p>  -->
 
 <!-- <button onclick="myfun()">press here</button> -->
 <!-- <button onclick="this.innerHTML=Date()">The time is?</button> -->
-<!-- <button onclick="disp()">try it</button> -->
+
 
 <script>   //type="module"
 
@@ -686,16 +697,15 @@ Mouse Over Me</div> -->
 // document.getElementById("demo1").innerHTML =
 // obj.employees[1].firstName + " " + obj.employees[1].lastName;
 
-//javascript object
-
-// //object properties
+//javascript object-----
+// //object properties-----
 // person.country = "india";  //add properties
 // delete person.age;  //deleting properties
 // myobj.cars.cars2;  //object properties declaration type
 // myobj.cars["cars2"];
 // myobj["cars"]["cars2"];
 
-//javasript methods
+//javasript methods-----
 // const person = {        //person is object
 //     fname : "tejas",
 //     lname : "devani",
@@ -705,7 +715,7 @@ Mouse Over Me</div> -->
 // };
 // document.write(person.fullname());
 
-//for-in loop
+//for-in loop-----
 // const person = {
 //   name: "tejas",
 //   age: 30,
@@ -748,7 +758,8 @@ Mouse Over Me</div> -->
 // var per2 = new person("mayu","makawana","mayumakawana");
 // document.write(per2.fname);
 
-//JavaScript Iterables
+
+//JavaScript Iterables-----
 // let numbers = [100,200,300];
 // //let str = "tejas devani";     //for string iterables
 // let iter = numbers[Symbol.iterator]();
@@ -758,8 +769,9 @@ Mouse Over Me</div> -->
 // // for(let char of str){
 // //     document.write(char);
 // // }
+ 
 
-//javaScript sets
+//javaScript sets-----
 // const set = new Set(["a","b","c","d","e"]);
 // document.write(set.size);
 // set.add("t");
@@ -770,7 +782,8 @@ Mouse Over Me</div> -->
 // document.write(set.entries());
 // document.write(set.clear());
 
-//javascript maps
+
+//javascript maps-----
 // const map = new Map()
 // map.set("name","tejas")    //use for insert and update
 // map.get("name","tejas")
@@ -781,13 +794,15 @@ Mouse Over Me</div> -->
 // document.write(map.delete("name"));  //delete
 // document.write(map.clear);  //clear
 
-//javascript functions
+
+//javascript functions-----
 // function myf(a,b) {
 //     return a*b;
 // }
 // document.write(6,6);
 
-//javascript classes
+
+//javascript classes-----
 // class car{
 //     constructor(name,year){
 //         this.name1 = name;
@@ -797,7 +812,9 @@ Mouse Over Me</div> -->
 // const mycar = new car("ford", 1999);
 // document.write(mycar.name1 + " " + mycar.year1);
 
-//inheritance in javascript
+
+//inheritance in javascript-----
+
 
 //javascript class getter and setter
 // class car {
@@ -826,21 +843,23 @@ Mouse Over Me</div> -->
 // let mycar = new car("ford");
 // document.write(car.hello());
 
-//javascript async
-//javascript callbacks
+
+//javascript async-----
+//javascript callbacks-----
 //functions are executed in the sequence they are called
 // function disp(some) {
 //     document.write(some);
 // }
 // function myfirst() {
-//     disp("hello");
+//     disp("hello\n");
 // }
 // function mysecond() {
-//     disp("hellooo");
+//     disp("hellooo\n");
 // }
-// myfirst();  
 // mysecond();
+// myfirst();  
 
+//sum of number
 // function disp(some) {
 //     document.write(some);
 // }
@@ -851,8 +870,9 @@ Mouse Over Me</div> -->
 // let result = mycalc(5,5);
 // mydisp(result);
 
+
 //javascript promise object
-// function  mydisp(some) {
+// function mydisp(some) {
 //     document.write(some);
 // }
 // let mypromis = new Promise(function(resolve,reject) {
@@ -873,50 +893,58 @@ Mouse Over Me</div> -->
 //     }
 // )
 
-//javascript async
 
+//javascript async/await/
+//async
+// let test = async() => "hellow";
+// test().then((result) => {
+//   document.write(result)
+// }); 
 
-//javascript html dom
-
-
-//javascript browser bom
-// document.write(screen.height);
-// document.write(screen.width);
-// document.write(screen.colorDepth);
-
-//javascript popup boxes
-// function  disp() {
-//     var txt;
-//     if(confirm("press a button")){
-//         txt = "you pressed cancel";
-//     }
-//     else{
-//         txt = "you pressed cancel";
-//     }
-//     document.write(txt);
+//await
+// async function test(){
+//   document.write("2 : Message <br>");
+//  await document.write("3 : Message<br>");
+//   document.write("4 : Message");
 // }
+//   document.write("1 : Message<br>");
+//   test();
+//   document.write("5 : Message<br>");
 
-//javascript prompt()
-// function  disp() {
-//     var text;
-//     let person = prompt("enter your name","tejas devani");
-//     if(person ==null || person==""){
-//     text = "prompt cancel";
-//     }
-//     else{
-//         text = "hllo " + person;
-//         document.write(text);
-//     };
-// }
 
-//html dom changing css
+//javascript html dom(Document Object Model)-----
+//Finding HTML Elements by Id
+// const element = document.getElementById("demo");
+// document.write(element.innerHTML);
+
+//Finding HTML Elements by tag name
+// const element = document.getElementsByTagName("p");
+// document.write(element[0].innerHTML);
+
+//Finding HTML Elements by class name
+// const element = document.getElementsByClassName("demo");
+// document.write(element[0].innerHTML);
+
+//Finding HTML Elements by Query Selector
+// const element = document.querySelectorAll("p.demo");
+// document.write(element[0].innerHTML);
+
+
+//html dom changing css-----
 // document.getElementById("demo1").style.color = "blue";
 
-//html dom animation
+
+//html dom animation-----
 // <div id="container">
 // <div id="animate"></div>
 
-//html dom events
+
+//html dom events-----
+// //click on text
+// function changeText(id) {
+//   id.innerHTML = "Ooops!";
+// }
+
 //mouse hover
 // function mOver(obj) {
 //   obj.innerHTML = "Thank You"
@@ -925,13 +953,14 @@ Mouse Over Me</div> -->
 //   obj.innerHTML = "Mouse Over Me"
 // }
 
-//html dom eventlistner
+
+//html dom eventlistner-----
 // document.getElementById("mybtn").addEventListener
 //     ("click", function() {
 //     alert("hello world");
 // });
 
-//Add Many Event Handlers to the Same Element
+//Add Many Event Handlers to the Same Element-----
 // var x = document.getElementById("mybtn");
 // x.addEventListener("click",first);
 // x.addEventListener("click",second);
@@ -958,45 +987,142 @@ Mouse Over Me</div> -->
 //     document.getElementById("demo1").innerHTML += "mouse click<br>"
 // }
 
-//new html element insert before
-// const para = document.createElement("p");
-// const node = document.createTextNode("This is new.");
-// para.appendChild(node);
-
-// const element = document.getElementById("div1");
-// const child = document.getElementById("p1");
-// element.insertBefore(para,child);
+//window Object addEventListener
+// window.addEventListener("resize", function(){
+//   document.getElementById("demo").innerHTML = Math.random();
+// })
 
 
-//bom - The Browser Object Model
-// document.getElementById("demo1").innerHTML = 
-// "Available screen width is " + screen.availWidth;
+// creating new elements (nodes)-----
+// const newElement = document.createElement("p");  //tag
+// const newText = document.createTextNode("this is new");  //text
+// const newComment = document.createComment("this is comment");  //comment
+// console.log(newElement);
+// console.log(newText);
+// console.log(newComment); 
 
-//javascript window location
-// document.getElementById("demo1").innerHTML = "full url of website is here>"+ window.location.href;
-// document.getElementById("demo2").innerHTML = "full url of website is here>"+ window.location.hostname;
-// function newdoc() {
-//             Window.location.assign("https://google.com");
+// append element
+// const newElement = document.createElement("p");  
+// const newText = document.createTextNode("this is new");
+// newElement.appendChild(newText);
+// document.getElementById("demo1").appendChild(newElement); 
+
+// insertbefore
+// const newElement = document.createElement("p");  
+// const newText = document.createTextNode("this is new");
+// var target = document.getElementById("demo1");
+// target.insertBefore(newElement,target.childNodes[0]);  
+
+// remove element
+// const newElement = document.createElement("p");
+// const newText = document.createTextNode("this is new"); 
+// newElement.removeChild(newText); 
+
+//replace element
+// const newElement = document.createElement("p");
+// const newElement2 = document.createElement("p2");
+// const newText = document.createTextNode("this is new");
+// newElement.appendChild(newText);
+// document.getElementById("demo1").appendChild(newElement);
+
+
+//javascript collection-----
+// const mycollection = document.getElementsByTagName("p");
+// document.write(mycollection[0].innerHTML);
+// document.write(mycollection.length);
+
+// function myfun() {
+//   const mycollection = document.getElementsByTagName("p");
+//   for (let i=0;i<mycollection.length;i++){
+//     mycollection[i].style.color = "red";
+//   }
 // }
 
-//javascript window history
-// function goback(){
+
+//javascript new dom node lists-----
+// const mynodelist = document.querySelectorAll("p");
+// document.write(mynodelist[0].innerHTML);
+// document.write(mynodelist.length);
+
+// function myfun() {
+//   const mynodelist = document.querySelectorAll("p");
+//   for(i=0;i<mynodelist.length;i++){
+//     mynodelist[i].style.color = "blue";
+//   }
+// }
+
+
+//javascript browser bom(Browser Object Model)-----
+// document.write(screen.height);
+// document.write(screen.width);
+// document.write(screen.colorDepth);
+// document.write(window.location.href);  //url of this page
+// document.write(window.location.host);  //host of this page
+// document.write(window.location.hostname);  //hostname of this page 
+// document.write(window.location.pathname);  //pathname of this page
+// document.write(window.location.protocol);  //protocol of this page
+// document.write(window.location.port);  //port number of this page
+
+
+//javascript window history-----
+// function myfun(){    //same as forward
 //     window.history.back()
 // }
 
-//javascript windows navigator
+
+//javascript windows navigator-----
 // document.write(navigator.cookieEnabled);
 // document.write(navigator.appName);
+// document.write(navigator.product);
 // document.write(navigator.appCodeName);
+// document.write(navigator.appVersion);
+// document.write(navigator.userAgent);
 // document.write(navigator.platform);
+// document.write(navigator.language);
 // document.write(navigator.onLine);
+// document.write(navigator.javaEnabled());
 
-//javascript timing event
-// function mytime() {
+
+//javascript popup boxes-----
+// function myfun() {
+//     var txt;
+//     if(confirm("press a button")){
+//         txt = "you pressed cancel";
+//     }
+//     else{
+//         txt = "you pressed cancel";
+//     }
+//     document.write(txt);
+// }
+
+//javascript prompt()
+// function  myfun() {
+//     var text;
+//     let person = prompt("enter your name","tejas devani");
+//     if(person ==null || person==""){
+//     text = "prompt cancel";
+//     }
+//     else{
+//         text = "hllo " + person;
+//         document.write(text);
+//     };
+// }
+
+
+//javascript timing event-----
+// function myfun() {
 //   alert("hello");
 // }
 
-//javascript cookies
+//A script on this page starts this clock
+// setInterval(mytimer,1000);
+// function mytimer(){
+//   const d = new Date();
+//   document.getElementById("demo1").innerHTML = d.toLocaleTimeString();
+// }
+
+
+//javascript cookies-----
 //create cookie
 // document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
 
@@ -1022,40 +1148,44 @@ Mouse Over Me</div> -->
 // }
 
 //create cookie
-function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+// function setCookie(cname,cvalue,exdays) {
+//   const d = new Date();
+//   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//   let expires = "expires=" + d.toUTCString();
+//   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+// }
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
+// function getCookie(cname) {
+//   let name = cname + "=";
+//   let decodedCookie = decodeURIComponent(document.cookie);
+//   let ca = decodedCookie.split(';');
+//   for(let i = 0; i < ca.length; i++) {
+//     let c = ca[i];
+//     while (c.charAt(0) == ' ') {
+//       c = c.substring(1);
+//     }
+//     if (c.indexOf(name) == 0) {
+//       return c.substring(name.length, c.length);
+//     }
+//   }
+//   return "";
+// }
 
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
+// function checkCookie() {
+//   let user = getCookie("username");
+//   if (user != "") {
+//     alert("Welcome again " + user);
+//   } else {
+//      user = prompt("Please enter your name:","");
+//      if (user != "" && user != null) {
+//        setCookie("username", user, 30);
+//      }
+//   }
+// }
+
+
+
+
 
 </script>
 </body>
@@ -1067,10 +1197,7 @@ function checkCookie() {
 
 
 
-
-
-
-<!-- //dom - nodes , animations , forms , windows event , collection
+<!-- //dom -  animations , windows event 
 //bom - cookies
 //async - whole
 //class - inheritance , static -->
