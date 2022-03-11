@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert_delete</title>
+</head>
+<body>
+    <script>
+
+const cars=["audi","lembo","bmw","suzuki","tata"];
+cars.push("mahindra","jeep");  //add mahindra,jeep on first element
+console.log("add mahindra,jeep on end element using push--> " + cars + "<br>");  
+cars.pop();  //remove jeep from last element
+console.log("remove jeep from end element using pop--> " + cars + "<br>");  
+cars.shift();  //remove audi on first element
+console.log("remove audi on first element using shift--> " + cars + "<br>");  
+cars.unshift("jeep");  //add jeep on first element 
+console.log("add jeep on first element using unshift--> " + cars + "<br>"); 
+cars.reverse();  //mahindra,tata,suzuki,bmw,lembo,jeep
+console.log("reverse string is-->" + cars + "<br>");
+cars.slice(1,3);  //lembo,bmw
+console.log("slice string is-->" + cars + "<br>");
+cars.splice(2,1,"mahindra","kia")  //"audi","lembo","mahindra","kia","suzuki","tata"
+console.log("splice string is-->" + cars + "<br>");
+cars.sort();  //sorted
+console.log("sorted string is-->" + cars + "<br>");
+cars.toString();
+console.log("tostirng string is-->" + cars + "<br>");
+cars.valueOf();
+console.log("valuof is-->" + cars + "<br>");
+cars.slice(2,4);
+console.log(cars);
+cars.splice(2,1,"xylo","nano");
+console.log(cars);
+// console.log(cars.sort());
+// console.log(cars.reverse());
+console.log(cars.join(" and "));  
+console.log(cars.includes("bmw"));
+// console.log(cars.fill("tata"));
+console.log(cars.indexOf("tata"));
+console.log(cars.lastIndexOf("lembo"));
+console.log(cars.sort());
+console.log(cars.reverse());
+console.log(cars.length); 
+
+
+var arr = Array.isArray(cars);  //isArray()
+console.log(arr);
+
+text = ("tejasdevani");  //Array.form()
+const myarr=Array.from(text);
+console.log(myarr);
+
+const string = ["a","b","c","d","e"]  //copyWithin
+console.log(string.copyWithin(0,2));
+
+const numbers = [32,39,85,69,12];
+console.log(numbers.map(Math.sqrt));  //map
+
+console.log(numbers.reduce(red));  //reduce
+function red(a,b){
+    return a+b;
+}
+
+console.log(numbers.reduceRight(redright));  //reduceRight
+function redright(a,b){
+    return a-b;
+}
+
+var arr1 = ("tejas");
+var arr2 = ("devani");
+var final = arr1.concat(arr2);  //concat
+console.log(final);
+
+const ages = [23,56,78,23,90];
+console.log(ages.every(ev))  //every
+function ev(age){
+    return age > 20;
+}
+
+console.log(ages.some(so));  //some
+function so(age){
+    return so > 20;
+}
+
+cars.forEach(myfun);  //foreach
+function myfun(item){
+    console.log(item);
+}
+
+let itr = cars.keys();  //keys
+for(let key of itr){
+    console.log(key);
+}
+
+let itr1 = cars.entries();  //entries
+for(let ent of itr1){
+    console.log(ent);
+}
+
+// indexof(2), constructor, prototype, valueof, tostring  
+
+    </script>
+</body>
+</html>
+
+------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// let arr = [10, 80, 50, 70, 20];
+// function fnumber(num){
+//   60<= num ? document.write(num + " is greater or equal to 60<br>")
+//   : 45 <= num && 59 >= num ? document.write(num + " is equal or between 45 and 59<br>")
+//   : 44>= num ? document.write(num + " is lessthan or equal to 44<br>") : anyother
+// }
+// c = arr.length;
+// for(let i=0;i<c;i++){
+//   fnumber(arr[i]);
+// }
+
+// let arr = [10, 80, 50, 70, 20];
+//     // const val = num.filter(fnumber);
+//     function fnumber(num){
+//         const fcase =num.filter(number=> 60 <=number).length
+//         document.write(fcase + " is greater or equal to 60 <br>")
+//         const scase =num.filter(number=> 45 <=number && 59>= number).length
+//         document.write(scase + " is equal or between 45 and 59<br>")
+//         const tcase =num.filter(number=> 44 >=number).length
+//         document.write(tcase + " is lessthan or equal to 44<br>")
+//   }
+//   fnumber(arr);
+
+//arrays------
+//concat
+// const arr1 = ["yash","yash"]
+// const arr2 = ["princy","tejas"];
+// const con = arr1.concat(arr2);
+// document.write(con);
+
+//constructor
+// function mobile(){
+//     this.model = "1100"
+//     this.price = function(){
+//         document.write(this.model)
+//     }
+// }
+// var samsung = new mobile();
+// var oneplus = new mobile();
+// samsung.price();
+// oneplus.price();
+
+//copywithin()
+//Copy the first two array elements to the last two array elements
+// const myarr = ["a","b","c","d","e","f"];
+// myarr.copyWithin(0,2);
+// document.write(myarr);  //d,e,f,d,e,f
+
+//entries()
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// const c = cars.entries();
+// for(let x of cars){
+//     document.write(x);
+// }
+
+//every
+//Check if all values in ages[] are over 13
+// const ages = [32,39,85,69,12];
+// document.write(ages.every(chkage));
+// function chkage(age){
+//     return age > 13;   //false
+// }
+
+//fill()
+//Fill all the elements with a value
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.fill("mahindra"));  //mahindra,mahindra,mahindra,mahindra,mahindra
+
+//filter
+// Return an array of all values in ages[] that are 18 or over
+// const ages = [34,45,12,54,32];
+// document.write(ages.filter(chkage));
+// function chkage(age){
+//     return age > 20;   //34,45,54,32
+// }
+
+//find()
+// Find the value of the first element with a value over 18
+// const ages = [45,32,67,98,12];
+// document.write(ages.find(chckage));
+// function chckage(age){
+//     return age > 18;   //45
+// }
+
+//findindex()
+//Find the first element with a value over 18
+// const ages=[45,67,23,45,12,9];
+// document.write(ages.findIndex(chckage));
+// function chckage(age){
+//     return age > 8;  
+// }
+
+//foreach()
+//Calls a function for each element in cars
+// let text = "";
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// cars.forEach(myfun);
+// document.write(text);
+// function myfun(item,index){
+//     text=text+index;
+// }
+
+//Array.from()
+// Create an array from a string
+// let text = "abcdefgh"
+// const myarr = Array.from(text);
+// document.write(myarr);   //a,b,c,d,e,f,g,h
+
+//includes()
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.includes("bmw"));  //true
+
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.includes("bmw",3));  //false  //start position
+
+
+//indexof()
+// Find the first index of "bmw"
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.indexOf("bmw"));  //2
+
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.indexOf("bmw",1));  
+
+//Array.isArray()
+//Check if an object is an array
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(Array.isArray(cars));   //true
+
+//join()
+//join the string
+//returns an array as a string
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.join(" and "));   //audi and lembo and bmw and suzuki and tata
+
+
+//keys()
+//Create an Array Iterator object, containing the keys of the array
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// const keys = cars.keys();
+// for(let x of keys){
+//     document.write(x);
+// }
+
+//length
+//The length property sets or returns the number of elements in an array
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.length);   //5
+
+//lastIndexOf()
+// Find the last index of "bmw"
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.lastIndexOf("bmw"));  //2
+
+// const cars=["audi","lembo","bmw","suzuki","tata"];
+// document.write(cars.lastIndexOf("bmw",2));  
+
+//map()
+// Return a new array with the square root of all element values:
+// const numbers = [4,9,16,25];
+// document.write(numbers.map(Math.sqrt));  //2,3,4,5
+
+// const numbers = [4,9,16,25];
+// const newarr = numbers.map(myfun);
+// document.write(newarr);
+// function myfun(num){
+//     return num*10;  //40,90,160,250
+// }
+
+
+
+</script>
+</body>
+</html>
