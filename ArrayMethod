@@ -102,6 +102,26 @@ for(let ent of itr1){
 
 // indexof(2), constructor, prototype, valueof, tostring  
 
+
+let stud = [{
+    "name" : "tejas",
+    "age" : 22,
+    "college" : "dcs",
+    "roll_no" : 12
+},
+{
+    "name" : "fenil",
+    "age" : 23,
+    "college" : "vnsgu"
+}
+];
+console.log(stud);
+var size = Object.entries(stud);
+
+stud.forEach(myfun);
+function myfun (item){ 
+    document.write(item.name+ item.age + item.college + item.roll_no);
+ }
     </script>
 </body>
 </html>
