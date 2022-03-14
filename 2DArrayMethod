@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,29 +45,10 @@
     },
     {
     "name" : "sagar",
-    "age" : 21,
-    "college" : "iit"
-    }
-];
-
-let teachers = [{
-    "name" : "tejas",
     "age" : 22,
-    "college" : "dcs",
-    "roll_no" : 12,
-    },
-    {
-    "name" : "fenil222",
-    "age" : 23,
-    "college" : "vnsgu"
-    },
-    {
-    "name" : "sagar",
-    "age" : 21,
     "college" : "iit"
     }
 ];
-
 
 
 stud[0].name = "mayu";   //add value after declare array
@@ -76,21 +58,8 @@ for(let i=0;i<stud.length;i++){    //print in document
     document.write(stud[i].name + " " + stud[i].age +  " " + stud[i].college + "<br>");
 }
 
-console.log(stud.concat(teachers));
-
-
-//  console.log(stud.map(function(value){
-//     return value.name === "sagar";
-// })find("sagar");
-
-
-
-
-
 stud[1].school = "abc school";  //add new value
 console.log(stud);
-
-
 
 let exmplobj = {            //add new array objact
     "name" : "harsh",
@@ -120,25 +89,29 @@ console.log(stud);
 
 console.log(stud.reverse());  //reverse 
 
-console.log(stud.sort()); //sort
+console.log(stud.sort((a)=>a.name)); //sort
 
 stud.valueOf();  //valueof
 console.log(stud);  
 
 function isfind(detail){   //find
-    return detail.name === "fenil";
+    return detail.name == "fenil";
 }
 console.log(stud.find(isfind));
+// console.log(stud.find((a)=>isfind(a)));
 
 function isfilter(detail){   //filter
     return detail.name === "harsh";
 }
 console.log(stud.filter(isfilter));
   
-var findex = stud.map(function (elem){  //findIndex
-    return elem.name;
-}).indexOf("fenil");
-console.log(findex);
+// var findex = stud.map(function (elem){  //findIndex
+//     return elem.name;
+// }).findIndex("fenil");
+// console.log(findex);
+
+let index = stud.findIndex((obj)=>obj.name=="fenil");
+console.log(index);
 
 var indexoff = stud.map(function (elem){  //indexOf
     return elem.name;
@@ -154,7 +127,14 @@ console.log(stud.map(function(elem){  //join
     return elem.name;
 }).join(","));
 
+const mp = stud.map((obj)=>obj.age==22);   //map return until lenth like true false
+console.log(" map result is - " , mp);
 
+const mp1 = stud.filter((obj)=>obj.age==22);  //filter return anything  like all element
+console.log(" filter result is - " , mp1);
+
+const mp2 = stud.findIndex((obj)=>obj.age==22);
+console.log(" findindex result is - " , mp2);
 
 // stud.forEach(myfun);   //foreach
 // function myfun (item){ 
