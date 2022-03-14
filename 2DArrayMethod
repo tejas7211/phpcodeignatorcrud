@@ -86,6 +86,7 @@ console.log(stud.concat(teachers));
 
 
 
+
 stud[1].school = "abc school";  //add new value
 console.log(stud);
 
@@ -134,23 +135,25 @@ function isfilter(detail){   //filter
 }
 console.log(stud.filter(isfilter));
   
-console.log(stud.map(function (elem){  //findIndex
+var findex = stud.map(function (elem){  //findIndex
     return elem.name;
-}).indexOf("fenil"));
+}).indexOf("fenil");
+console.log(findex);
 
-
-console.log(stud.map(function (elem){  //indexOf
+var indexoff = stud.map(function (elem){  //indexOf
     return elem.name;
-}).indexOf("sagar"));
+}).indexOf("sagar");
+console.log(indexoff);
 
-
-console.log(stud.map(function (elem){  //LastIndexOf
+var lindex = stud.map(function (elem){  //LastIndexOf
     return elem.name;
-}).lastIndexOf("harsh"));
+}).lastIndexOf("harsh");
+console.log(lindex);
 
 console.log(stud.map(function(elem){  //join
     return elem.name;
 }).join(","));
+
 
 
 // stud.forEach(myfun);   //foreach
