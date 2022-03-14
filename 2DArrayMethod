@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2DArrayMethod</title>
+</head>
+<body>
+    <script>
+        // //multidimensional Arrys
+        // var ary = [
+        //     ["tejas",22,"dcs"],
+        //     ["fenil",23,"vnsgu"],
+        //     ["mayu",21,"bmef"]
+        // ];
+
+        // console.log(ary);
+        // for(let i=0;i<ary.length;i++){   //print multidimensional arrays
+        //     for(let j=0;j<ary.length;j++){
+        //     document.write(ary[i][j] + " ");
+        //     }
+        //     document.write("<br>");
+        // }
+        // ary[1].push("savan",34);  //push in multidimensional Arrys
+        // document.write(ary);
+        // document.write("<br><br>")
+
+    //object arrays
+    let stud = [{
+    "name" : "tejas",
+    "age" : 22,
+    "college" : "dcs",
+    "roll_no" : 12,
+    // "favmovies" : ["dhoom","hum"],
+    // "living" : {
+    //     "city" : "surat",
+    //     "country" : "india"
+    },
+    {
+    "name" : "fenil",
+    "age" : 23,
+    "college" : "vnsgu"
+    },
+    {
+    "name" : "sagar",
+    "age" : 21,
+    "college" : "iit"
+    }
+];
+
+let teachers = [{
+    "name" : "tejas",
+    "age" : 22,
+    "college" : "dcs",
+    "roll_no" : 12,
+    },
+    {
+    "name" : "fenil222",
+    "age" : 23,
+    "college" : "vnsgu"
+    },
+    {
+    "name" : "sagar",
+    "age" : 21,
+    "college" : "iit"
+    }
+];
+
+
+
+stud[0].name = "mayu";   //add value after declare array
+console.log(stud);  //print in console
+
+for(let i=0;i<stud.length;i++){    //print in document
+    document.write(stud[i].name + " " + stud[i].age +  " " + stud[i].college + "<br>");
+}
+
+console.log(stud.concat(teachers));
+
+
+//  console.log(stud.map(function(value){
+//     return value.name === "sagar";
+// })find("sagar");
+
+
+
+
+stud[1].school = "abc school";  //add new value
+console.log(stud);
+
+
+
+let exmplobj = {            //add new array objact
+    "name" : "harsh",
+    "age" : 28,
+    "college" : "gtu"
+}
+stud.push(exmplobj);
+console.log(stud);  //push
+
+stud.pop();
+console.log(stud);  //pop 
+
+stud.shift();
+console.log(stud);  //shift
+
+stud.unshift(exmplobj);
+console.log(stud);  //unshift
+
+console.log(stud.length);  //length
+
+console.log(stud.slice(1,3));  //slice  //1st type
+stud.slice(1,3,exmplobj);  //2nd type
+console.log(stud);
+
+stud.splice(1,exmplobj);  //splice--
+console.log(stud);
+
+console.log(stud.reverse());  //reverse 
+
+console.log(stud.sort()); //sort
+
+stud.valueOf();  //valueof
+console.log(stud);  
+
+function isfind(detail){   //find
+    return detail.name === "fenil";
+}
+console.log(stud.find(isfind));
+
+function isfilter(detail){   //filter
+    return detail.name === "harsh";
+}
+console.log(stud.filter(isfilter));
+  
+console.log(stud.map(function (elem){  //findIndex
+    return elem.name;
+}).indexOf("fenil"));
+
+
+console.log(stud.map(function (elem){  //indexOf
+    return elem.name;
+}).indexOf("sagar"));
+
+
+console.log(stud.map(function (elem){  //LastIndexOf
+    return elem.name;
+}).lastIndexOf("harsh"));
+
+console.log(stud.map(function(elem){  //join
+    return elem.name;
+}).join(","));
+
+
+// stud.forEach(myfun);   //foreach
+// function myfun (item){ 
+//     console.log(item.name + item.age + item.college + item.roll_no);
+//  }
+
+
+//splice,fill,from
+ </script>
+    
+</body>
+</html>
