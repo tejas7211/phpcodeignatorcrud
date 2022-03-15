@@ -39,19 +39,39 @@
     //     "country" : "india"
     },
     {
-    "name" : "fenil",
-    "age" : 23,
-    "college" : "vnsgu"
-    },
-    {
     "name" : "sagar",
     "age" : 22,
     "college" : "iit"
+    },
+    {
+    "name" : "fenil",
+    "age" : 23,
+    "college" : "vnsgu"
     }
 ];
 
+// let teachers = [{
+//     "name" : "tejass",
+//     "age" : 22,
+//     "college" : "dcs",
+//     "roll_no" : 12,
+//     // "favmovies" : ["dhoom","hum"],
+//     // "living" : {
+//     //     "city" : "surat",
+//     //     "country" : "india"
+//     },
+//     {
+//     "name" : "sagarr",
+//     "age" : 22,
+//     "college" : "iit"
+//     },
+//     {
+//     "name" : "fenill",
+//     "age" : 23,
+//     "college" : "vnsgu"
+//     }
+// ];
 
-stud[0].name = "mayu";   //add value after declare array
 console.log(stud);  //print in console
 
 for(let i=0;i<stud.length;i++){    //print in document
@@ -61,7 +81,14 @@ for(let i=0;i<stud.length;i++){    //print in document
 stud[1].school = "abc school";  //add new value
 console.log(stud);
 
-let exmplobj = {            //add new array objact
+// console.log(stud.concat(teachers));  //concat
+
+stud.forEach(myfun);   //foreach
+function myfun (item){ 
+    console.log(item.name + item.age + item.college + item.roll_no);
+ }
+
+let exmplobj = {   //add new array objact
     "name" : "harsh",
     "age" : 28,
     "college" : "gtu"
@@ -80,69 +107,70 @@ console.log(stud);  //unshift
 
 console.log(stud.length);  //length
 
-console.log(stud.slice(1,3));  //slice  //1st type
-stud.slice(1,3,exmplobj);  //2nd type
-console.log(stud);
+// console.log(stud.slice(1,3));  //slice 
 
-stud.splice(1,exmplobj);  //splice--
-console.log(stud);
+// console.log(stud.splice(1,exmplobj));  //splice
 
-console.log(stud.reverse());  //reverse 
+// console.log(stud.copyWithin(0,1));  //copywithin
 
-console.log(stud.sort((a)=>a.name)); //sort
+// console.log(stud.reverse());  //reverse 
 
 stud.valueOf();  //valueof
 console.log(stud);  
+
+console.log(stud.sort((a)=>a.name)); //sort
+
+const sa1 = stud.sort((a,b)=> a.age - b.age);
+console.log(sa1);  //age wise sorting
+
+const sa = stud.sort((a,b) => a.name.charCodeAt(0) - b.name.charCodeAt(0))
+console.log(sa);   //name wise sorting
+
+console.log(stud.every((obj)=>obj.age > 18));  //every
+console.log(stud.some((obj)=>obj.age > 29));  //some
+
+const mp = stud.map((obj)=>obj.age==22);   //map return until length like true false
+console.log(" map result is - " , mp);
+
+const mp1 = stud.filter((obj)=>obj.age==22);  //filter return anything like all element
+console.log(" filter result is - " , mp1);
+
+const mp2 = stud.findIndex((obj)=>obj.age==22);  //findindex
+console.log(" findindex result is - " , mp2);
 
 function isfind(detail){   //find
     return detail.name == "fenil";
 }
 console.log(stud.find(isfind));
-// console.log(stud.find((a)=>isfind(a)));
+// console.log(stud.find((a)=>isfind(a)));   //when we want to find more than one element
 
-function isfilter(detail){   //filter
-    return detail.name === "harsh";
-}
-console.log(stud.filter(isfilter));
-  
-// var findex = stud.map(function (elem){  //findIndex
-//     return elem.name;
-// }).findIndex("fenil");
-// console.log(findex);
-
-let index = stud.findIndex((obj)=>obj.name=="fenil");
-console.log(index);
-
-var indexoff = stud.map(function (elem){  //indexOf
+console.log(stud.map(function(elem){  //lastIndexOf
     return elem.name;
-}).indexOf("sagar");
-console.log(indexoff);
+}).lastIndexOf("harsh"));
 
-var lindex = stud.map(function (elem){  //LastIndexOf
-    return elem.name;
-}).lastIndexOf("harsh");
-console.log(lindex);
+console.log(stud.map(function(elem){  //indexOf
+    return elem.college;
+}).indexOf("vnsgu"));  
 
 console.log(stud.map(function(elem){  //join
     return elem.name;
 }).join(","));
 
-const mp = stud.map((obj)=>obj.age==22);   //map return until lenth like true false
-console.log(" map result is - " , mp);
+console.log(Object.keys(stud[0]));  //keys
+console.log(Object.entries(stud));  //entries
 
-const mp1 = stud.filter((obj)=>obj.age==22);  //filter return anything  like all element
-console.log(" filter result is - " , mp1);
+const sr = stud.sort((a,b)=>a.age - b.age);
 
-const mp2 = stud.findIndex((obj)=>obj.age==22);
-console.log(" findindex result is - " , mp2);
-
-// stud.forEach(myfun);   //foreach
-// function myfun (item){ 
-//     console.log(item.name + item.age + item.college + item.roll_no);
-//  }
+console.log(stud.map(function(ele){
+    return ele.name;
+}).join(","));
+ 
+let mr = stud.filter((obj)=>obj.anme == " fenil");
 
 
-//splice,fill,from
+
+
+//fill,from,reduce,reduceright
  </script>
     
 </body>
