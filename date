@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    const d =new Date("may 27, 1999 01:15:20:526");  //date
+    console.log("date--" + d);
+    let day = d.getDay();  //getday  returns the day of the week
+    console.log("day of the week--" + day);
+    let fullyear = d.getFullYear();  //fullyear
+    console.log("year--" + fullyear);
+    let month = d.getMonth()+1;  //getmonth
+    console.log("month--" + month);
+    let arymonth = months[d.getMonth()]; 
+    console.log("get month from array--" + arymonth); 
+    let hour = d.getHours();  //gethours
+    console.log("hour--" +hour);   
+    let minite = d.getMinutes();  //getminute
+    console.log("minute--" +minite);
+    let second = d.getSeconds();  //getsecond
+    console.log("second--" +second);
+    let msecond = d.getMilliseconds();  //getminisecond
+    console.log("milisecond--" +msecond);
+    
+    
+    let utcdate = d.getUTCDate();  //getutcdate
+    console.log("date according utc--" + utcdate);
+    let utcday = d.getUTCDay();  //getutcday
+    console.log("day of the week according UTC--" + utcday);
+    let utcfullyear = d.getUTCFullYear();  //fullyear
+    console.log("year according utc--" + utcfullyear);
+    let utcmonth = d.getUTCMonth()+1;  //getmonth
+    console.log("month according utc--" + utcmonth);
+    let utchour = d.getUTCHours();  //gethours
+    console.log("hour according utc--" + utchour);   
+    let utcminite = d.getUTCMinutes();  //getminute
+    console.log("minute according utc--" + utcminite);
+    let utcsecond = d.getUTCSeconds();  //getsecond
+    console.log("second according utc--" + utcsecond);
+    let utcmsecond = d.getUTCMilliseconds();  //getminisecond
+    console.log("milisecond according utc--" + utcmsecond);
+    
+    
+    let time = d.getTime();  //returns the number of milliseconds since January 1, 1970
+    console.log("time--"+time);
+    let diff = d.getTimezoneOffset();  //getTimezoneOffset
+    console.log("diffrence between UTC and local time--" + diff);
+
+
+    const sf = new Date();  //setfullyear
+    sf.setFullYear(2020, 4, 27);  
+    console.log("set fullyear,month,date--" + sf);
+    const sf2 = new Date();  
+    sf2.setFullYear(sf2.getFullYear(), sf2.getMonth()-6);  
+    console.log("Set the date to six months ago--" + sf2);
+
+    const sm = new Date();  //setmonth
+    sm.setMonth(2,27);
+    console.log("set month,date--" + sm);
+    const sm2 = new Date();
+    sm2.setMonth(sm2.getMonth(),0);
+    console.log("Set the date to the last day of last month--" + sm2);
+    
+    const sd = new Date();  //setdate
+    sd.setDate(27);
+    console.log("set date--" + sd);
+    const sd2 = new Date("July 21, 1983 01:15:00");  
+    sd2.setDate(27);
+    console.log("set the day of the month of a date--" + sd2);
+
+    const sh = new Date();  //sethours
+    sh.setHours(3, 10, 27);  
+    console.log("set hours,minute,second--" + sh);
+
+    const smi = new Date();  //setminutes
+    smi.setMinutes(10, 27);  
+    console.log("set minute,second--" + smi);
+
+    const ss = new Date();  //setsecond
+    ss.setSeconds(23);  
+    console.log("set second--" + ss);
+
+    const sms = new Date();  //setmilisecond
+    sms.setMilliseconds(234);
+    console.log("set milisecond--" + sms.getMilliseconds());
+
+    // const sdate = new Date();  //settime--
+    // sdate.setTime(1332403882588);
+    // console.log(sdate);
+
+
+    const sutcf = new Date();  //setUTCFullYear
+    sutcf.setUTCFullYear(2020, 4, 27);  
+    console.log("set fullyear,month,date according utc--" + sutcf);
+    const sutcf2 = new Date();  
+    sutcf2.setUTCFullYear(sutcf2.getFullYear(), sutcf2.getMonth()-6);  
+    console.log("Set the date to six months ago according utc--" + sutcf2);
+
+    const sutcm = new Date();  //setUTCmonth
+    sutcm.setUTCMonth(2,27);
+    console.log("set month,date according utc--" + sutcm);
+    const sutcm2 = new Date();
+    sutcm2.setUTCMonth(sutcm2.getMonth(),0);
+    console.log("Set the date to the last day of last month according utc--" + sutcm2);
+    
+    const sutcd = new Date();  //setUTCdate
+    sutcd.setUTCDate(27);
+    console.log("set date according utc--" + sutcd);
+    const sutcd2 = new Date("July 21, 1983 01:15:00");  
+    sutcd2.setUTCDate(27);
+    console.log("set the day of the month of a date according utc--" + sutcd2);
+
+    const sutch = new Date();  //setUTChours
+    sutch.setUTCHours(3, 10, 27);  
+    console.log("set hours,minute,second according utc--" + sutch);
+
+    const sutcmi = new Date();  //setUTCminutes
+    sutcmi.setUTCMinutes(10, 27);  
+    console.log("set minute,second according utc--" + sutcmi);
+
+    const sutcs = new Date();  //setUTCsecond
+    sutcs.setUTCSeconds(23);  
+    console.log("set second according utc--" + sutcs);
+
+    const sutcms = new Date();  //setUTCmilisecond
+    sutcms.setUTCMilliseconds(234);
+    console.log("set milisecond according utc--" + sutcms.getMilliseconds());
+
+
+    let textiso = d.toISOString();  //toisostring
+    console.log("Get a date as a string, using the ISO standard--" + textiso);
+
+    let textutc = d.toUTCString();  //toutcstring
+    console.log("Get a date as a string, using the UTC standard--" + textutc);
+
+
+    let textst = d.toString();  //tostring
+    console.log("Convert a date object to a string--" + textst);
+
+    let textdate = d.toDateString();  //todatestring
+    console.log("Get today's date as a readable string--" + textdate);
+
+    let texttime = d.toTimeString();  //totimestring
+    console.log("Get the time portion of a date object as a string--" + texttime);
+
+
+    let textlst = d.toLocaleString();  //tolocalestring
+    console.log("Get a date as string, using locale conventions--" + textlst);
+
+    let textldate = d.toLocaleDateString();  //tolocaledatestring
+    console.log("Get a date as a string, using locale conventions--" + textldate);
+
+    let textltime = d.toLocaleTimeString();  //tolocaletimestring
+    console.log("Get the time portion of a date as a string, using locale conventions--" + textltime);
+
+
+    let dn = Date.now();  //now  returns the number of milliseconds since January 1, 1970
+    console.log("returns the number of milliseconds since January 1, 1970--" + dn);
+
+    let dp = Date.parse("may 27, 1999");  //parse  returns the time difference since January 1, 1970
+    console.log("returns the time difference since January 1, 1970--" + dp);
+    
+    let dutc = Date.UTC(1999, 05, 27);  //parse  returns the number of milliseconds between a date and January 1, 1970, according to UTC
+    console.log("Get the number of milliseconds between a date and January 1, 1970--" + dutc);
+    
+
+
+const da = new Date();
+let a = da.getUTCFullYear();
+
+console.log(a);
+
+
+
+
+
+
+
+
+</script>    
+</body>
+</html>
