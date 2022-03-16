@@ -1,0 +1,22 @@
+let arr = [10, 80, 50, 70, 20];
+function fnumber(num){
+  60<= num ? document.write(num + " is greater or equal to 60<br>")
+  : 45 <= num && 59 >= num ? document.write(num + " is equal or between 45 and 59<br>")
+  : 44>= num ? document.write(num + " is lessthan or equal to 44<br>") : anyother
+}
+c = arr.length;
+for(let i=0;i<c;i++){
+  fnumber(arr[i]);
+}
+
+let arr = [10, 80, 50, 70, 20];
+    // const val = num.filter(fnumber);
+    function fnumber(num){
+        const fcase =num.filter(number=> 60 <=number).length
+        document.write(fcase + " is greater or equal to 60 <br>")
+        const scase =num.filter(number=> 45 <=number && 59>= number).length
+        document.write(scase + " is equal or between 45 and 59<br>")
+        const tcase =num.filter(number=> 44 >=number).length
+        document.write(tcase + " is lessthan or equal to 44<br>")
+  }
+  fnumber(arr);
