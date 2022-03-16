@@ -48,7 +48,8 @@
     "Is undefined NaN? " + isNaN(undefined) + "<br>" ;
     document.write(nan);   
 
-    document.write(Number(true) + "<br>" +  //number  //converts a value to a number
+    //number  //converts a value to a number
+    document.write(Number(true) + "<br>" +  
     Number(false) + "<br>" +
     Number(Boolean) + "<br>" + 
     Number(new Date()) + "<br>" +
@@ -59,7 +60,8 @@
     Number([9.9]) + "<br>" + 
     Number([9,9]));
 
-    document.write(parseFloat(10) + "<br>" +  //parsefloat  //parses a value as a string and returns the first number
+    //parsefloat  //parses a value as a string and returns the first number
+    document.write(parseFloat(10) + "<br>" +  
     parseFloat("10") + "<br>" +
     parseFloat("10.33") + "<br>" +
     parseFloat("34 45 66") + "<br>" +
@@ -70,7 +72,8 @@
     parseFloat("40H") + "<br>" +
     parseFloat("H40"));
 
-    document.write(parseInt("10") + "<br>" +  //parseint  //parses a value as a string and returns the first integer
+    //parseint  //parses a value as a string and returns the first integer
+    document.write(parseInt("10") + "<br>" +  
     parseInt("10.00") + "<br>" +
     parseInt("10.33") + "<br>" +
     parseInt("34 45 66") + "<br>" +
@@ -83,9 +86,15 @@
     parseInt("0x10")+ "<br>" +
     parseInt("10", 16)) ;
 
-        
+    //string  //converts a value to a string
+    document.write(String(new Date()) + "<br>" +  
+    String("12345") + "<br>" +
+    String(12345) + "<br>" +
+    String(Boolean(0)) + "<br>" +
+    String(Boolean(1)) + "<br>" +
+    String([1,2,3,4]));   
 
-
+    //escape,unescape,NaN
     </script>
 </body>  
 </html>
