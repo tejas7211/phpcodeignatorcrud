@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global</title>
+</head>
+<body>
+    <script>
+    let uri = "my test.asp?name=ståle&car=saab";
+    let encoded = encodeURI(uri);  //encodeuri    
+    console.log("encodeURI is--"+encoded)   
+    let decoded = decodeURI(uri);  //decodeuri
+    console.log("decodeURI is--"+ decoded);
+    let encodedcom = encodeURIComponent(uri);  //encodeuricomponent   
+    console.log("encodeURIComponent is--"+encodedcom)
+    let decodedcom = decodeURIComponent(uri);  //decodeuricomponent
+    console.log("decodeURIComponent is--"+ decodedcom);
+    
+    let x= 10;  //eval--
+    let y = 20; 
+    let text = x*y;
+    console.log(eval(text));
+
+    let a = 1.797693134862315E+308;  //infinity
+    let b = a * 1.001;
+    console.log(b);
+
+    let fine = isFinite(1234);  //isfinite
+    console.log(fine);
+    
+    let nan = "Is 123 NaN? " + isNaN(123) + "<br>" +  //isNaN
+    "Is -1.23 NaN? " + isNaN(-1.23) + "<br>" +
+    "Is 5-2 NaN? " + isNaN(5-2) + "<br>" +
+    "Is 0 NaN? " + isNaN(0) +"<br>" +
+    "Is '123' NaN? " + isNaN('123') + "<br>" +
+    "Is ' ' NaN? " + isNaN(' ') + "<br>" +
+    "Is true NaN? " + isNaN(true) + "<br>" +
+    "Is false NaN? " + isNaN(false) + "<br>" +
+    "Is null NaN? " + isNaN(null)+ "<br>" +
+    "Is 'Hello' NaN? " + isNaN('Hello') + "<br>" +
+    "Is '2005/12/12' NaN? " + isNaN('2005/12/12') + "<br>" +
+    "Is 0/0 NaN? " + isNaN(0/0) + "<br>" +
+    "Is 'A' NaN? " + isNaN('A') + "<br>" +
+    "Is 'NaN' NaN? " + isNaN('NaN') + "<br>" +
+    "Is NaN NaN? " + isNaN(NaN) + "<br>" +
+    "Is undefined NaN? " + isNaN(undefined) + "<br>" ;
+    document.write(nan);   
+
+    document.write(Number(true) + "<br>" +  //number  //converts a value to a number
+    Number(false) + "<br>" +
+    Number(Boolean) + "<br>" + 
+    Number(new Date()) + "<br>" +
+    Number(999) + "<br>" + 
+    Number("999") + "<br>" + 
+    Number("999 888") + "<br>" + 
+    Number([9]) + "<br>" + 
+    Number([9.9]) + "<br>" + 
+    Number([9,9]));
+
+    document.write(parseFloat(10) + "<br>" +  //parsefloat  //parses a value as a string and returns the first number
+    parseFloat("10") + "<br>" +
+    parseFloat("10.33") + "<br>" +
+    parseFloat("34 45 66") + "<br>" +
+    parseFloat("He was 40") + "<br>" +
+    parseFloat("40.00") + "<br>" +
+    parseFloat("   40   ") + "<br>" +
+    parseFloat("40 years") + "<br>" +
+    parseFloat("40H") + "<br>" +
+    parseFloat("H40"));
+
+    document.write(parseInt("10") + "<br>" +  //parseint  //parses a value as a string and returns the first integer
+    parseInt("10.00") + "<br>" +
+    parseInt("10.33") + "<br>" +
+    parseInt("34 45 66") + "<br>" +
+    parseInt("   60   ") + "<br>" +
+    parseInt("40 years") + "<br>" +
+    parseInt("He was 40") + "<br>" +
+    parseInt("10", 10)+ "<br>" +
+    parseInt("010")+ "<br>" +
+    parseInt("10", 8)+ "<br>" +
+    parseInt("0x10")+ "<br>" +
+    parseInt("10", 16)) ;
+
+        
+
+
+    </script>
+</body>  
+</html>
