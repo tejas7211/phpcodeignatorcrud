@@ -1,0 +1,129 @@
+<html>
+<head></head>
+<body>
+<!-- <script>
+document.write("hello");
+</script> -->
+<script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+------index.js------
+
+document.write("hello");
+
+// //datatype
+// //numbers
+// var num1 = 455;
+// //string
+// var str = "this is me";
+// //object
+// var marks = {
+//     tejas: 34,
+//     ravi: 35
+// };
+// //booleans
+// var a = true;
+// var b = false;
+// //undefined
+// var und;
+// //null
+// var n=null;
+
+// //primitive = undefined,null,string,boolean,symbol
+// //reference = arrays,objects
+
+// //arrays
+// var arr=[1,2,"tejas",4,5];
+
+// //operators
+// arithmatic
+// a=5;
+// b=6
+// document.write(a+b);
+// document.write(a-b);
+// document.write(a*b);
+// document.write(a/b);
+
+// //assignment
+// var c = b;
+// c+=2;  //c=c+2;
+// c*=2;
+// c/=2;
+// c-=2;
+
+// //comparison
+// var x = 50;
+// var y = 40;
+// document.write(x==y);
+// document.write(x>y);
+// document.write(x<y);
+// document.write(x<=y);
+// document.write(x>=y);
+
+// //logical
+// document.write(true && true);
+// document.write(false && true);
+// document.write(false && false);
+// document.write(true && false);
+
+// //logical or
+// document.write(true || true);
+// document.write(false || true);
+// document.write(false || false);
+// document.write(true || false);
+
+// //logical not
+// document.write(!false);
+// document.write(!true);
+
+
+
+//functions
+// function avg(a,b){
+//     return (a+b)/2;
+// }
+// c1= avg(4,5);
+// c2 = avg(10,12);
+// document.write(c1,c2);
+
+
+//conditionals 
+//if-else
+//age = 18;
+// if(age>18){
+//     document.write("18+");
+// }
+// else{
+//     document.write("18-");
+// }
+
+// const vote = age>18 ? "18plus" : "18minus";
+// document.write(vote);
+
+//else if
+// if (age > 18) {
+//     document.write("18+");
+// }
+// else if (age < 18) {
+//     document.write("18-");
+// }
+// else {
+//     document.write("18");
+// }
+
+//array //loop
+// var arr = [1,2,3,4,5,5];
+// for(i=0;i<arr.length;i++){
+//     document.write(arr[i]);
+// }
+
+// arr.forEach(function(element){
+//     document.write(element)
+// });
+
