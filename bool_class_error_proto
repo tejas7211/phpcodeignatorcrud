@@ -80,3 +80,37 @@ console.log(mycar.show())
 </body>
 </html>
 
+--------prototype-------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+function person(name,age){
+            this.fname = name;
+            this.fage = age;
+        }
+        const myname = new person("tejas",25);
+        person.prototype.nationality = "indian";
+        console.log(myname.nationality);
+
+        
+Array.prototype.ucase = function(){
+    for (let i=0;i<this.length;i++){
+     this[i] = this[i].toUpperCase();
+    }
+};
+const cars=["audi","lembo","bmw","suzuki","tata"];
+cars.ucase();
+console.log(cars);
+
+    </script>
+    
+</body>
+</html>
