@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,9 +117,7 @@ console.log(stud.length);  //length
 stud.valueOf();  //valueof
 console.log(stud);  
 
-console.log(stud.sort((a)=>a.name)); //sort
-
-const sa1 = stud.sort((a,b)=> a.age - b.age);
+const sa1 = stud.sort((a,b)=> a.age - b.age);  //sort
 console.log(sa1);  //age wise sorting
 
 const sa = stud.sort((a,b) => a.name.charCodeAt(0) - b.name.charCodeAt(0))
@@ -167,8 +164,17 @@ console.log(stud.map(function(ele){
  
 let mr = stud.filter((obj)=>obj.anme == " fenil");
 
+stud.filter((obj)=>{  
+    if(obj.name=="sagar"){
+        obj.rno = 4;
+    }
+});
+console.log(stud);
 
-
+stud.filter((obj)=>{
+    delete obj.name;
+})
+console.log(stud);
 
 //fill,from,reduce,reduceright
  </script>
