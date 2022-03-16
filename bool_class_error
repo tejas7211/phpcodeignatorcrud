@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let bool = true;  //tosString
+let text = bool.toString();
+console.log(typeof(text));
+
+console.log(bool.valueOf());  //valueof
+    </script>
+</body>
+</html>
+
+
+------class----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class car{    //class extends
+    constructor(brand){
+        this.carname = brand;
+    }
+    present(){
+        return this.carname;
+    }
+}
+
+class model extends car{
+    constructor(brand,price){
+        super(brand);
+        this.model = price;
+    }
+    show(){
+        return this.present() + this.model;
+    }
+}
+mycar = new model("ord", 200000);
+console.log(mycar.show())
+
+    </script>
+</body>
+</html>
+
+
+
+---------error----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <script>
+        try{
+            addlerts("welcome");
+        }
+        catch(err){
+            console.log(err.name + " " + err.message);
+        }
+        
+    </script>
+</body>
+</html>
+
