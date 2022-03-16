@@ -30,7 +30,9 @@
     let fine = isFinite(1234);  //isfinite
     console.log(fine);
     
-    let nan = "Is 123 NaN? " + isNaN(123) + "<br>" +  //isNaN
+    document.write("-----isNaN()-----" + "<br>");
+    //returns true if a value is NaN
+    let nan = "Is 123 NaN? " + isNaN(123) + "<br>" +  
     "Is -1.23 NaN? " + isNaN(-1.23) + "<br>" +
     "Is 5-2 NaN? " + isNaN(5-2) + "<br>" +
     "Is 0 NaN? " + isNaN(0) +"<br>" +
@@ -48,7 +50,8 @@
     "Is undefined NaN? " + isNaN(undefined) + "<br>" ;
     document.write(nan);   
 
-    //number  //converts a value to a number
+    document.write("-----number -----" + "<br>");
+    //converts a value to a number
     document.write(Number(true) + "<br>" +  
     Number(false) + "<br>" +
     Number(Boolean) + "<br>" + 
@@ -57,10 +60,11 @@
     Number("999") + "<br>" + 
     Number("999 888") + "<br>" + 
     Number([9]) + "<br>" + 
-    Number([9.9]) + "<br>" + 
-    Number([9,9]));
+    Number([9.9]) + "<br>");
 
-    //parsefloat  //parses a value as a string and returns the first number
+
+    document.write("-----parsefloat-----" + "<br>");
+    //parses a value as a string and returns the first number
     document.write(parseFloat(10) + "<br>" +  
     parseFloat("10") + "<br>" +
     parseFloat("10.33") + "<br>" +
@@ -70,9 +74,10 @@
     parseFloat("   40   ") + "<br>" +
     parseFloat("40 years") + "<br>" +
     parseFloat("40H") + "<br>" +
-    parseFloat("H40"));
+    parseFloat("H40") + "<br>");
 
-    //parseint  //parses a value as a string and returns the first integer
+    document.write("-----parseint-----" + "<br>");
+    //parses a value as a string and returns the first integer
     document.write(parseInt("10") + "<br>" +  
     parseInt("10.00") + "<br>" +
     parseInt("10.33") + "<br>" +
@@ -84,9 +89,10 @@
     parseInt("010")+ "<br>" +
     parseInt("10", 8)+ "<br>" +
     parseInt("0x10")+ "<br>" +
-    parseInt("10", 16)) ;
+    parseInt("10", 16) + "<br>") ;
 
-    //string  //converts a value to a string
+    document.write("-----string-----" + "<br>");
+    //converts a value to a string
     document.write(String(new Date()) + "<br>" +  
     String("12345") + "<br>" +
     String(12345) + "<br>" +
