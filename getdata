@@ -25,12 +25,13 @@
 </head>
 <body>
     <center>
-    <input type="text" placeholder="Search">
+    <input type="text" placeholder="Search" id="search">
      <p id="showData"></p>
         </center>
     <script>
         function CreateTableFromJSON() {
-            var listdata = [
+
+var listdata = [
 {
 "id": 1,
 "name": "foo",
@@ -62,7 +63,7 @@
 "category": "two",
 "type": "C",
 "active": "FALSE"
-},
+}
 
 ]
         // EXTRACT VALUE FOR HTML HEADER. 
@@ -74,7 +75,7 @@
                 }
             }
         }
-
+console.log(col);
         // CREATE DYNAMIC TABLE.
         var table = document.createElement("table");
 
@@ -95,6 +96,11 @@
 
             for (var j = 0; j < col.length; j++) {
                 var tabCell = tr.insertCell(-1);
+                // var searchvalue = document.getElementById('search').innerHTML;
+                // console.log(searchvalue);
+                // if(listdata[i].name.indexOf(searchvalue) >-1){
+                //     // var serc = listdata.filter((obj)=>obj.name = )
+                // }
                 tabCell.innerHTML = listdata[i][col[j]];
             }
         }
@@ -106,6 +112,7 @@
     }
 
     CreateTableFromJSON();
+
     </script>
 </body>
 </html>
